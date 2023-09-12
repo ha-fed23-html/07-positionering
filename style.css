@@ -4,7 +4,7 @@
 body {
 	height: 200vh;
 }
-.row {
+.row, .row2 {
 	display: flex;
 	border: 1px solid black;
 	margin: 0.5em;
@@ -53,4 +53,36 @@ body {
 	position: sticky;
 	top: 20px;
 	left: 2em;
+}
+
+.row2 {
+	margin-top: 8em;
+}
+.row2 > * {
+	flex: 1 0 0em;
+	background-color: rgb(166, 144, 215);
+	height: 4em;
+	margin: 0.2em;
+}
+
+.row2 > :nth-child(3) {
+	opacity: 0.75;
+}
+.row2 > :nth-child(4) {
+	opacity: 0.50;
+}
+.row2 > :nth-child(5) {
+	opacity: 0.25;
+}
+.row2 > :nth-child(6) {
+	opacity: 0.1;
+}
+
+.z {
+	font-weight: bold;
+	font-size: 125%;
+	position: relative;
+	left: 4em;
+	bottom: 3em;
+	z-index: -1;
 }
