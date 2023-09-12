@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 200vh;
+}
+.row {
+	display: flex;
+	border: 1px solid black;
+	margin: 0.5em;
+	position: relative;
+	width: 75vw;
+}
+
+.row > * {
+	flex: 1 0 0em;
+	background-color: rgb(166, 144, 215);
+	height: 4em;
+	margin: 0.2em;
+}
+.row > :nth-child(2) {
+	position: relative;
+	left: 2em;
+	top: 5em;
+	background: none;
+	border: 3px dashed rgb(53, 142, 50);
+	/* z-index: 9001; */
+}
+.row > :nth-child(3) {
+	position: absolute;
+	width: 4em;
+	top: 1em;
+	right: 1em;
+	/* z-index: 2; */
+	background-color: rgb(224, 151, 151);
+}
+
+.row > :nth-child(5) {
+	background-color: rgb(109, 165, 24);
+	position: fixed;
+	left: 2em;
+	top: 2em;
+}
+.row > :nth-child(7) {
+	background-color: rgb(202, 202, 142);
+	position: sticky;
+	/* sticky förhåller sig till .row som är positionerad föregångare. Fungerar bara om .row hade varit större än viewport. */
+	top: 20px;
+	left: 2em;
+}
+.klibbig {
+	background-color: rgb(202, 202, 142);
+	position: sticky;
+	top: 20px;
+	left: 2em;
+}
